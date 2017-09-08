@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>hoc javascript co ban phan 2</title>
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" type="text/css" href="C:\Users\NGUYENDANGQUANG\Desktop\html\bootstrap-3.1.1-dist\bootstrap-3.1.1-dist\css/bootstrap.min.css"/>
+	<script type="text/javascript" language = "javascript" src = "phan2.js">
+		var name;
+		function welcome(){
+			name = prompt('kimi no nawa?');
+		}
+		function goodbye(){
+			alert('tam biet ' + name + ", cam on da ghe tham");
+		}	
+	</script>
+</head>
+<body >
+	<header>
+		<!-- HEADER HERE -->
+	</header>
+	<article>
+		<div>
+			<!-- <h3>copy đoạn văn phía dưới</h3>
+			<p oncopy="copy()">toi la nguyen dang quang</p> -->
+		</div>
+		<div>
+			<!-- <input type="text" id="n1" name="" 
+			onkeyup="tong()"> 
+			<input type="text" id="n2" name="" onkeyup="tong()">
+			<input type="text" id="ketqua" value=""> -->
+		</div>
+		<div>
+			<ul >
+				<!-- <li><a href="#" class="show">manga</a></li>
+				<li><a href="#" class="show">anime</a></li>
+				<li><a href="#" class="show">sach</a></li> -->
+			</ul>
+			<script type="text/javascript">
+				// message();
+				// inthuoctinh(window);
+
+				// var	a1 = new hocsinh("dang quang","1512432");
+				// a1.xuattt();
+				// // document.write(parseInt(0xC,10));
+				// var a = new MyArr(10);
+				// a[1] = 12;
+
+				// a.outArr();
+				// document.write(a[1]);
+			</script>
+			<div >
+			<!-- <form  action="#" method="post">
+					Username: <input type="text" name="username" id="username" placeholder="username" required /><br>
+					Password: <input type="password" name="password" id="password" placeholder="password" required /><br>
+					Re-Password: <input type="password" name="re-password" id="re-password" placeholder="nhap lai password" required /><br>
+					<input type="text" name="age" id="age" placeholder="tuoi" required/><br>
+					<input type="submit" name="submit" value="submit" onclick="return validated()">
+				</form> -->
+
+				<!-- <input type="text" id="listener" placeholder="nhap gi do..."/>
+				<div id="result">loading...</div>
+				<script type="text/javascript" language="javascript">
+					var quan = document.getElementById('listener');
+					quan.addEventListener('keyup',function(){
+						document.getElementById('result').innerHTML = quan.value;
+					});
+				</script> -->
+
+				<input type="text" name="" id="input" placeholder="nhap di.." />
+				<div id="result">loading...</div>
+				<script type="text/javascript">
+					
+					// var x=document.getElementById('input');
+					// x.addEventListener('keyup',function(){
+					// 	document.getElementById('result').innerHTML = x.value;
+					// });
+
+					// var xx = confirm('ban co muon nhan loi chao khong? (OK/NO');
+					// if(xx){
+					// 	alert('chao mung ban den vs web');
+					// }
+					// else{
+					// 	alert('ban cut di ban :) ');
+					// }
+
+					// var y = prompt('10 + 10 bằng bao nhiêu? ');
+					// y = parseInt(y);
+					// if(y==20){
+					// 	alert('gioi, ban co muon tl cau tiep?');
+					// }
+					// else{
+					// 	alert('thang ngu');
+					// }
+					// var name;
+
+				</script>
+
+				<div id="ketqua" ></div>
+				<input type='button' id="stoprandom" value='Stop Random'/> 
+				<script type="text/javascript">
+					var myhtml = document.getElementsByTagName('html')[0];
+					var but= document.getElementById('stoprandom');
+					var kq = document.getElementById('ketqua');
+
+					function testrand(){
+						var temp = Math.random();
+						kq.innerHTML = temp;
+					}	
+					myhtml.addEventListener('mousemove',testrand)
+					but.removeEventListener('mousemove',testrand);
+				</script>
+			</div>
+		</div>
+		<div>
+
+		</div>
+	</article>
+	<footer>
+		<!-- FOOTER HERE -->
+	</footer>
+</body>
+</html>

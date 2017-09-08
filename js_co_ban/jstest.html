@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- THẺ STYLE CHO INPUT -->
+	<style type="text/css">
+		input#textbox{
+			font-size: 20px;
+
+			height:30%;
+			width: 30%;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+	</style>
+	<title>Test the fisrt javascrip programming</title>
+	<!-- đoạn js lấy ngày tháng hệ thống -->
+	<script type="text/javascript"> 
+		function refrClock() {
+
+			var d=new Date();
+
+			var s=d.getSeconds();
+
+			var m=d.getMinutes();
+
+			var h=d.getHours();
+
+			var day=d.getDay();
+
+			var date=d.getDate();
+
+			var month=d.getMonth();
+
+			var year=d.getFullYear();
+
+			var days= new Array("Chủ nhật","Thứ hai","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7");
+
+			var months=new Array("1","2","3","4","5","6","7","8","9","10","11","12"); 
+
+			var am_pm;
+
+			if (s<10) { 
+				s="0" + s
+			}
+
+			if (m<10) {
+				m="0" + m
+			}
+
+			if (h>12){
+				h-=12;
+				AM_PM = "PM"
+			}
+
+			else {
+				AM_PM="AM"
+			}
+
+			if (h<10) {
+				h="0" + h
+			}
+
+			document.getElementById("clock").innerHTML=days[day] + " Ngày " + date + "/" +months[month] + "/" + year + " Bây giờ là [" + h + ":" + m + ":" + s + "] " + AM_PM; 
+			setTimeout("refrClock()",1000);
+		}	
+	</script>
+
+	<!-- đoạn js kiểm tra năm nhuận -->
+	<script type="text/javascript" language = "javascript">
+		function KTraNamNhuan(x){
+			if(x%4==0)
+				return true;
+			else if(x %100==0){
+				if(x %400 == 0)
+					return true;
+				else
+					return false;
+			}
+			else
+				return false;
+		}
+	</script>
+
+</head>
+<body>
+	<!-- <button onclick="alert(confirm('ban co biet toi khong?'))"> xac nhan </button><br> -->
+	<!-- <input type="button" onclick="alert('xin chao cac ban')" value="click me" /><br> -->
+
+	<!-- ĐOẠN SCRIPT VỀ NHẬP VÀ XUẤT MỘT POPUP THÔNG  BÁO -->
+	<input type="text" id="textbox" placeholder="Nhap thong bao" value=""/>
+	<input type="button" id="button_box" value="In Thong bao"/><br>
+	<script type="text/javascript" language = "javascript">
+		// var button = document.getElementById('button_box');
+		// button.addEventListener('click',function(){
+		// 	// var x = document.getElementById('textbox').value;
+		// 	confirm(document.getElementById('textbox').value);	
+		// });
+	</script>
+
+	<div id="clock">Loading...</div>
+	<!-- ĐOẠN SCRIPT VỀ NHẬP VÀ XUẤT THÔNG BÁO TRÊN CŨNG POPUP VỚI HÀM PROMPT() -->
+	<script type="text/javascript" language="javascript">
+		// refrClock(); 
+		// var y = parseInt(prompt("nhap nam: "));
+		// var x = KTraNamNhuan(y);
+		// console.log(x);
+		// if(x)
+		// 	document.write(y + " la nam nhuan");
+		// else
+		// 	document.write(y + " khong la nam nhuan");
+		// // alert(message);
+		// var name=window.prompt("Hello! What's your name ? ", "");
+		// document.write("Hello " + name + " ! I hope you like JavaScript ");
+	</script>
+	<!-- HÀM NOSCRIPT ĐỂ KTRA TRÌNH DUYỆT CÓ HỖ TRỢ JS KHÔNG -->
+	<NOSCRIPT>
+		<B> Trang này có sử dụng JavaScript. Do đó bạn cần sử dụng trình duyệt Netscape Navigator từ version 2.0 trở đi!
+			<BR>
+				<A HREF="http://home.netscape.com/comprd/mirror/index.html">
+					Hãy kích chuột vào đây để tải về phiên bản Netscape mới hơn
+				</A>
+			</BR>
+			Nếu bạn đã sử dụng trình duyệt Netscape từ 2.0 trở đi mà vẫn đọc được dòng chữ này thì hãy bật Preferences/Advanced/JavaScript lên
+		</B>
+	</NOSCRIPT>
+
+	<!-- HÀM SET MỘT HÀM XẢY RA TRONG BAO LÂU TỚI, ĐOẠN CODE DÙNG setTimeout() -->
+		<!-- <script type="text/javascript" language = "javascript">
+			var x =  function timeTest(){
+				confirm("ban co tim duoc thong tin muon tim khong??");
+			}
+			setTimeout(x,3000);
+			function Clear(){
+				clearTimeout(x);
+			}
+		</script>
+		<input type="button" value="clear" onclick="Clear()"/> -->
+
+
+		<!-- ĐOẠN CODE DÙNG setInterval(), set hàm lặp lại sau n giây -->
+		<!-- <script laguage = "javascript" type="text/javascript">
+			var x = setInterval(function(){
+				
+				alert("xin chao ");
+				clearInterval(x);
+
+			},3000);
+		</script> -->
+
+		<!-- EVENT IN JAVASCRIP -->
+		
+		<script language="javascript">
+			function show_result(){
+				var x = document.getElementById('result');
+				var y = document.getElementById('input_');
+				x.innerHTML = y.value;
+			};
+			function copy(){
+				alert('copy thanh cong cmnr');
+			}
+			function tinhTong(){
+				var x = document.getElementById('n1');
+				var y = document.getElementById('n2');
+				var z = document.getElementById('ketqua');
+
+				var tong = parseInt(x.value) + parseInt(y.value);
+				if(!isNaN(tong))
+					z.value=tong;
+				// z.innerHTML = x.value + y.value;
+
+			}
+		</script>
+
+		<!-- <p oncopy ='copy()'>hay copy doan chu nay.</p> -->
+		<!-- <input type='text' id ='input_' onkeypress='show_result()'/> -->
+		<!-- <div id='result'>loading..</div> -->
+		<input type="text" id="n1" placeholder="nhap so hang 1 " onkeyup="tinhTong()">
+		<input type="text" id="n2" placeholder="nhap so hang 2 " onkeyup="tinhTong()"/>
+		<input type="text" id="ketqua" value="S = ">
+	</body>
+	</html>

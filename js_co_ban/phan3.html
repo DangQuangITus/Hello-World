@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TU HOC HTML PHAN 3</title>
+	<script type="text/javascript" src="phan3.js"></script>
+</head>
+<body onLoad="startTime()">
+	<div id='result'>day la the DIV</div>
+	<input type="button" value="click me" id="change" onClick="change2() "/>
+	<input type="button" value="set content" onClick="set_cont()" />
+
+	<!--.........................-->
+
+	<form action="#" method="post" >
+		usernam: <input type="text" name="username" id="username" required/><br>
+		password: <input type="password" name="password" id="password" required/><br>
+		<div id="mess"></div>
+		<input type="submit" value="submit" onClick="validated()"/>
+
+	</form>
+	<!-- <div>
+		<div id="node_append">day la vi du cho NODE</div>
+		<input type="button" value="click me" id="node">
+		<script type="text/javascript" >
+			var button = document.getElementById('node');
+			button.addEventListener("click",function(){
+				var x = document.createElement('h1');
+				x.innerHTML="day la noi dung them vao.";
+				document.getElementById('node_append').appendChild(x);	
+			});
+		</script>
+	</div> -->
+	<br>
+	<div>
+		<div id="insertBefore">
+			<p>toi la nguyen dang quang</p>
+			<p>Sinh vien Khoa hoc tu nhien</p>
+		</div>
+		
+		<div>
+			<input type="button" value="click me" id="node"/>
+			<input type="button" value="click to delete" id="delete node">
+			<input type="button" value="click to replace" id="replace node">
+			<script type="text/javascript">
+
+				with(document){
+					var button = getElementById('node');
+					button.addEventListener("click",function(){
+						var x = createElement('p');
+						x.innerHTML="xin chao cac ban";
+				//var z = getElementById('insertBefore');
+				var y = getElementsByTagName('p')[0];
+				getElementById('insertBefore').insertBefore(x,y);
+			});
+					var button2=getElementById('delete node');
+					button2.addEventListener("click",function(){
+						x = getElementsByTagName('p')[0];
+						getElementById('insertBefore').removeChild(x);
+					});
+
+					var button3=getElementById('replace node');
+					button3.addEventListener("click",function(){
+						var x = getElementsByTagName('p')[0];
+						var y = createElement('h5');
+						y.innerHTML="XIN CHAO CAC BAN";
+						getElementById('insertBefore').replaceChild(y,x);
+					});
+				}
+				var x = 123;
+				x = x.toString(2);
+				document.write(x);
+			</script><br>
+		</div>
+
+		<div> ĐỒNG HỒ: </div>
+		<div id="timer"></div><br>
+		<div>
+			<script type="text/javascript">
+				var winChild = null;
+				with(window){
+					function openWindow(){
+						winChild = open("http://animetvn.com/","xem anime","width=500,height=500");
+						return false;
+					}
+
+					function closeWindow(){
+						winChild.close();
+						return false;
+					}
+				}
+			</script>
+			<a href="#" onClick = "return openWindow()">open animetvn</a><be>
+			<a href="#" onClick = "return closeWindow()">close animetvn</a><be>
+			<button onCLick = "lammoi()">refresh</button>
+			<button onCLick = "toiAnime()">xem anime</button>
+		</div>
+
+	</div>
+</body>
+</html>
